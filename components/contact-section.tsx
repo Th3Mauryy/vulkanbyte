@@ -24,8 +24,15 @@ export default function ContactSection() {
   // Inicializar EmailJS una sola vez
   useEffect(() => {
     try {
-      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'y7MwRbmutgaGhO3nI'
-      console.log('Initializing EmailJS with public key:', publicKey)
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      
+      if (!publicKey) {
+        console.error('EmailJS public key not configured')
+        setSubmitStatus('error')
+        return
+      }
+      
+      console.log('Initializing EmailJS...')
       emailjs.init(publicKey)
       setIsEmailJSInitialized(true)
       console.log('EmailJS initialized successfully')
@@ -110,9 +117,16 @@ export default function ContactSection() {
       console.log('Sending email with params:', templateParams)
 
       // Enviar email usando EmailJS
-      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_yvy9tra'
-      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_sl4ztba'
-      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'y7MwRbmutgaGhO3nI'
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+
+      if (!serviceId || !templateId || !publicKey) {
+        console.error('EmailJS configuration missing')
+        setSubmitStatus('error')
+        setIsLoading(false)
+        return
+      }
 
       console.log('EmailJS Configuration:')
       console.log('Service ID:', serviceId)
