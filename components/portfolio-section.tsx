@@ -6,47 +6,26 @@ import { ExternalLink, Globe } from "lucide-react"
 
 const portfolioItems = [
   {
-    title: "E-commerce Moderno",
-    description: "Tienda online completa con carrito de compras, pasarela de pagos y panel administrativo.",
-    technologies: ["React", "Next.js", "Stripe", "Tailwind CSS"],
-    link: "#",
+    title: "Safesocks",
+    description: "Es una marca de calcetín Super Antiderrapante que posee una tinta exclusiva (antislipink) y única en su segmento.",
+    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    link: "https://www.safesocks.mx",
     category: "E-commerce",
   },
   {
-    title: "Landing Page Corporativa",
-    description: "Sitio web institucional con diseño responsivo y optimización SEO para empresa de servicios.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    link: "#",
-    category: "Corporativo",
+    title: "Dolce&Paca",
+    description: "Es una tienda de ropa de paca, con precios accesible y ropa de moda.",
+    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    link: "https://dolce-paca.vercel.app",
+    category: "Landing page",
   },
   {
-    title: "Aplicación Web SaaS",
-    description: "Plataforma de gestión empresarial con dashboard interactivo y sistema de usuarios.",
-    technologies: ["React", "Node.js", "PostgreSQL", "Tailwind CSS"],
-    link: "#",
-    category: "SaaS",
-  },
-  {
-    title: "Portfolio Creativo",
-    description: "Sitio web personal para artista con galería interactiva y sistema de contacto.",
-    technologies: ["Next.js", "Sanity CMS", "Tailwind CSS", "Vercel"],
-    link: "#",
-    category: "Portfolio",
-  },
-  {
-    title: "Blog Profesional",
-    description: "Blog corporativo con CMS personalizado y sistema de comentarios integrado.",
-    technologies: ["Next.js", "MDX", "Tailwind CSS", "Vercel"],
-    link: "#",
-    category: "Blog",
-  },
-  {
-    title: "App de Reservas",
-    description: "Sistema de reservas online con calendario interactivo y notificaciones automáticas.",
-    technologies: ["React", "Express.js", "MongoDB", "Socket.io"],
-    link: "#",
-    category: "Aplicación",
-  },
+    title: "RefZone",
+    description: "Nuestro proyecto mas ambicioso, es de un sitio web donde los organizadores de las canchas crearan sus partido y los arbtitros podran postularse, haciendo mas facil la labor de conseguirlos y optimizar el sistema actual.",
+    technologies: ["React", "Next.js", "JS", "Tailwind CSS", "MongoDB"],
+    link: "https://ref-zone.vercel.app",
+    category: "Gestión",
+  }
 ]
 
 export default function PortfolioSection() {

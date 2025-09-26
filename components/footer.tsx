@@ -12,7 +12,7 @@ export default function Footer() {
               Especialistas en desarrollo web que transforman ideas en experiencias digitales excepcionales. Tu éxito
               digital es nuestra pasión.
             </p>
-            <p className="text-background/60 text-sm font-serif">© 2024 Vulkanbyte. Todos los derechos reservados.</p>
+            <p className="text-background/60 text-sm font-serif">© 2025 Vulkanbyte. Todos los derechos reservados.</p>
           </div>
 
           {/* Services */}
@@ -32,7 +32,7 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Contacto</h4>
             <ul className="space-y-2 text-background/80 font-serif">
               <li>contacto@vulkanbyte.com</li>
-              <li>+1 (555) 123-4567</li>
+              <li>+52 (312) 310-8241</li>
               <li>WhatsApp disponible</li>
               <li>Consulta gratuita</li>
             </ul>

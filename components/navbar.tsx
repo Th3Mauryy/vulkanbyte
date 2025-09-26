@@ -29,7 +29,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-primary font-mono">Vulkanbyte</h1>
+            <img 
+              src="/vulkan-logo.png" 
+              alt="Vulkanbyte Logo" 
+              className="h-15 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}

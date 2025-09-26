@@ -1,14 +1,20 @@
 {
-  "name": "my-v0-project",
-  "version": "0.1.0",
+  "name": "vulkanbyte-website",
+  "version": "1.0.0",
   "private": true,
+  "description": "Sitio web corporativo de Vulkanbyte - Desarrollo web profesional",
+  "author": "Vulkanbyte",
+  "homepage": "https://vulkanbyte.com",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "build:analyze": "ANALYZE=true npm run build"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-accordion": "1.2.2",
     "@radix-ui/react-alert-dialog": "1.1.4",
