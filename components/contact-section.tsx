@@ -86,7 +86,7 @@ export default function ContactSection() {
 
     if (!serviceId || !templateId || !publicKey) {
       setErrorMessage(
-        `El formulario no está disponible en este momento. Escríbenos por WhatsApp al ${SITE.whatsappDisplay} y te respondemos directo.`,
+        `El formulario no está disponible en este momento. Escríbeme por WhatsApp al ${SITE.whatsappDisplay} y te respondo directo.`,
       )
       setStatus("error")
       return
@@ -113,14 +113,14 @@ export default function ContactSection() {
     } catch (error) {
       console.error("Error al enviar el formulario:", error)
       setErrorMessage(
-        `No se pudo enviar el mensaje. Intenta de nuevo o escríbenos por WhatsApp al ${SITE.whatsappDisplay}.`,
+        `No se pudo enviar el mensaje. Intenta de nuevo o escríbeme por WhatsApp al ${SITE.whatsappDisplay}.`,
       )
       setStatus("error")
     }
   }
 
   const handleWhatsApp = () => {
-    window.open(whatsappHref("Hola Vulkanbyte, me interesa conocer más sobre sus paquetes."), "_blank")
+    window.open(whatsappHref("Hola Vulkanbyte, me interesa conocer más sobre tus paquetes."), "_blank")
   }
 
   return (
@@ -129,7 +129,7 @@ export default function ContactSection() {
         <div className="text-center mb-12">
           <h2 className="text-h2 font-display font-semibold text-foreground mb-4">Contacto</h2>
           <p className="text-body text-muted-foreground max-w-2xl mx-auto">
-            ¿Tienes un negocio en {SITE.zona.split(",")[0]}? Cuéntame qué necesitas y te contesto el mismo día.
+            ¿Tienes un negocio en {SITE.zona.split(",")[0]}? Cuéntame qué necesitas y te contesto en menos de 24 horas.
           </p>
         </div>
 
@@ -265,7 +265,7 @@ export default function ContactSection() {
                   <h3 className="text-h3 font-semibold">¡Hablemos por WhatsApp!</h3>
                 </div>
                 <p className="mb-4 text-white/80">
-                  ¿Prefieres una conversación directa? Te contesto el mismo día.
+                  ¿Prefieres una conversación directa? Te contesto en menos de 24 horas.
                 </p>
                 <Button variant="secondary" onClick={handleWhatsApp} className="w-full">
                   Abrir WhatsApp
@@ -277,7 +277,7 @@ export default function ContactSection() {
               <CardContent className="p-6">
                 <h3 className="text-h3 font-semibold mb-4">¿Por qué trabajar conmigo?</h3>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>Respuesta el mismo día</li>
+                  <li>Respuesta en menos de 24 horas</li>
                   <li>Precios visibles, sin cotizar a ciegas</li>
                   <li>Trato directo, sin intermediarios</li>
                   <li>Soporte incluido en la mensualidad</li>

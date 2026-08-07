@@ -65,10 +65,10 @@ export default function PaquetesSection() {
                       </span>
                     </div>
                     <div className="mb-4">
-                      <span className="text-mono text-small tabular-nums">${formatMXN(p.mensualidad)}/mes</span>
+                      <span className="text-mono text-small tabular-nums">${formatMXN(p.mensualidad)}/mes de mensualidad</span>
                       <p className={destacado ? "text-small text-white/60 mt-1" : "text-small text-muted-foreground mt-1"}>
-                        Cubre el hosting, el dominio, los respaldos y los cambios chicos. Sin ella el sitio no se
-                        queda en línea.
+                        Cubre el hosting, el dominio, los respaldos y los cambios chicos. Sin pagar la mensualidad,
+                        el sitio no se queda en línea.
                       </p>
                     </div>
 
@@ -78,7 +78,7 @@ export default function PaquetesSection() {
                       <Spec label="Textos redactados" value={p.textosRedactados} />
                       <Spec label="Fotos incluidas" value={`${p.fotosIncluidas}`} />
                       <Spec label="WhatsApp y Maps" value={p.whatsappMaps} />
-                      <Spec label="Aparecer en Google" value={p.apareceEnGoogle} />
+                      <Spec label="Configurado para que Google lo encuentre" value={p.apareceEnGoogle} />
                       <Spec label="Formulario" value={p.formulario} />
                       <Spec label="Catálogo o menú" value={p.catalogo} />
                       <Spec label="Rondas de cambios" value={`${p.rondasCambios}`} />
@@ -101,6 +101,7 @@ export default function PaquetesSection() {
         </div>
 
         <Reveal className="mt-10 text-center">
+          <p className="text-small text-muted-foreground mb-3">Todos los precios son + IVA.</p>
           <details className="inline-block text-left mx-auto">
             <summary className="cursor-pointer text-small text-muted-foreground hover:text-foreground transition-colors">
               Ver adicionales

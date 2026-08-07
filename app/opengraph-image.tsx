@@ -36,7 +36,7 @@ export default function Image() {
           Páginas web para negocios de Colima
         </div>
         <div style={{ display: "flex", color: "#3F6F52", fontSize: 32, marginTop: 40 }}>
-          Desde $7,500 + IVA · Entrega en 10 días
+          Desde $7,500 + IVA · Precio fijo, sin sorpresas
         </div>
       </div>
     ),
