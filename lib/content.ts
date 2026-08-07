@@ -131,12 +131,13 @@ export const PASOS: Paso[] = [
   {
     numero: 1,
     titulo: "Platicamos",
-    descripcion: "45 minutos en tu negocio, sábado. Me cuentas qué haces y a quién le vendes.",
+    descripcion:
+      "45 minutos en tu negocio, sábado. Me cuentas qué haces, a quién le vendes, y me pasas tu logo (si tienes) y tus redes.",
   },
   {
     numero: 2,
     titulo: "Apartas tu lugar",
-    descripcion: "60% de anticipo. Ahí arranco.",
+    descripcion: "60% de anticipo. Desde ese día empiezan a correr los días de entrega.",
   },
   {
     numero: 3,
@@ -154,7 +155,7 @@ export const PROYECTOS: Proyecto[] = [
   {
     title: "Safesocks",
     description:
-      "Es una marca de calcetín Super Antiderrapante que posee una tinta exclusiva (antislipink) y única en su segmento.",
+      "Marca de calcetines antiderrapantes con una tinta especial (Antislip Ink) que le da el agarre. Les hice su tienda en línea completa.",
     technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
     link: "https://www.safesocks.mx",
     category: "E-commerce",
@@ -182,12 +183,37 @@ export const FAQ: PreguntaFrecuente[] = [
     respuesta: "Sí, tuyo. Yo solo lo administro.",
   },
   {
+    pregunta: "¿Cómo se paga?",
+    respuesta: "Por transferencia bancaria. Te doy mi CLABE y te mando factura si la necesitas.",
+  },
+  {
+    pregunta: "¿Veo el sitio antes de pagar el resto?",
+    respuesta:
+      "Sí. Te lo muestro armado, ajustamos lo que haga falta, y hasta que estés de acuerdo pagas el resto y lo publico.",
+  },
+  {
     pregunta: "¿Y si dejo de pagar la mensualidad?",
     respuesta: "Tienes 30 días. Después se despublica, no se borra.",
   },
   {
     pregunta: "¿Puedo pedir cambios después?",
-    respuesta: "Sí, los chicos van incluidos en la mensualidad.",
+    respuesta:
+      "Sí. Los cambios chicos —cambiar un texto, una foto, un precio o un dato de contacto— van incluidos en la mensualidad. Si es algo grande, como una sección nueva o un rediseño, se cotiza aparte.",
+  },
+  {
+    pregunta: "¿Qué es una 'ronda de cambios'?",
+    respuesta:
+      "Es el momento donde me mandas todo lo que quieras ajustar junto, en un solo mensaje. Reviso, hago los cambios y te muestro el resultado. Presencia y Negocio traen 2 rondas; Catálogo trae 3.",
+  },
+  {
+    pregunta: "¿Qué cuenta como una página?",
+    respuesta:
+      "Cada sección con su propia dirección web: Inicio, Nosotros, Servicios, Contacto, por ejemplo. Un catálogo completo de productos cuenta como una sola página, aunque tenga muchos productos adentro.",
+  },
+  {
+    pregunta: "¿Van a hacer que salga primero en Google?",
+    respuesta:
+      "No te prometo un lugar exacto — eso no lo controla nadie. Lo que sí hago es dejar tu página lista para que Google la encuentre: tu nombre, dirección y teléfono bien puestos, y tu ficha de Google Maps conectada.",
   },
   {
     pregunta: "¿Dan factura?",
@@ -199,7 +225,8 @@ export const FAQ: PreguntaFrecuente[] = [
   },
   {
     pregunta: "¿Y si no tengo fotos?",
-    respuesta: "El paquete incluye fotos profesionales.",
+    respuesta:
+      "No hay problema. El paquete incluye fotos profesionales que yo elijo según tu giro. Si quieres fotos de tu negocio, las puedes tomar tú con tu celular y yo te digo cómo, o te cotizo una sesión aparte.",
   },
 ]
 
