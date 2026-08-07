@@ -1,37 +1,42 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from "next"
+import { SITE } from "@/lib/content"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://vulkanbyte.com'
-
   return [
     {
-      url: baseUrl,
+      url: SITE.url,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 1,
     },
     {
-      url: `${baseUrl}/#sobre-nosotros`,
+      url: `${SITE.url}/#paquetes`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
+      changeFrequency: "monthly",
+      priority: 0.9,
     },
     {
-      url: `${baseUrl}/#servicios`,
+      url: `${SITE.url}/#como-funciona`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
+      changeFrequency: "monthly",
+      priority: 0.6,
     },
     {
-      url: `${baseUrl}/#portafolio`,
+      url: `${SITE.url}/#trabajos`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: "weekly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/#contacto`,
+      url: `${SITE.url}/#preguntas`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: `${SITE.url}/#contacto`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
       priority: 0.9,
     },
   ]

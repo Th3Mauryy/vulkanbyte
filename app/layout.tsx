@@ -1,67 +1,55 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, Open_Sans } from "next/font/google"
+import { Bricolage_Grotesque, Public_Sans, JetBrains_Mono } from "next/font/google"
 import "./globals.css"
+import { SITE, FAQ } from "@/lib/content"
 
-const inter = Inter({
+const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-bricolage",
 })
 
-const openSans = Open_Sans({
+const publicSans = Public_Sans({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-open-sans",
+  variable: "--font-public-sans",
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-jetbrains-mono",
 })
 
 export const metadata: Metadata = {
   title: {
-    default: "Vulkanbyte - Desarrollo Web Profesional",
-    template: "%s | Vulkanbyte"
+    default: "Páginas web en Colima y Villa de Álvarez | Vulkanbyte",
+    template: "%s | Vulkanbyte",
   },
-  description: "Vulkanbyte se especializa en desarrollo web moderno. Creamos sitios web profesionales, aplicaciones web personalizadas y soluciones digitales que impulsan tu negocio.",
-  keywords: [
-    "desarrollo web",
-    "diseño web",
-    "aplicaciones web", 
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Tailwind CSS",
-    "sitios web profesionales",
-    "Vulkanbyte",
-    "desarrollo frontend",
-    "desarrollo backend"
-  ],
-  authors: [{ name: "Vulkanbyte", url: "https://vulkanbyte.com" }],
+  description:
+    "Diseño sitios web para negocios de Colima. Desde $7,500, entrega en 10 días. Textos y fotos incluidos.",
+  authors: [{ name: "Vulkanbyte", url: SITE.url }],
   creator: "Vulkanbyte",
   publisher: "Vulkanbyte",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://vulkanbyte.com'),
+  metadataBase: new URL(SITE.url),
   alternates: {
-    canonical: '/',
+    canonical: "/",
   },
   openGraph: {
-    title: "Vulkanbyte - Desarrollo Web Profesional",
-    description: "Especialistas en desarrollo web moderno. Creamos sitios web profesionales y aplicaciones web que impulsan tu negocio.",
-    url: '/',
-    siteName: 'Vulkanbyte',
-    type: 'website',
-    locale: 'es_ES',
-    images: [
-      {
-        url: '/vulkan-logo.png',
-        width: 1200,
-        height: 630,
-        alt: 'Vulkanbyte - Desarrollo Web Profesional',
-      },
-    ],
+    title: "Páginas web en Colima y Villa de Álvarez | Vulkanbyte",
+    description:
+      "Diseño sitios web para negocios de Colima. Desde $7,500, entrega en 10 días. Textos y fotos incluidos.",
+    url: "/",
+    siteName: "Vulkanbyte",
+    type: "website",
+    locale: "es_MX",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: "Vulkanbyte - Desarrollo Web Profesional",
-    description: "Especialistas en desarrollo web moderno. Creamos sitios web profesionales y aplicaciones web que impulsan tu negocio.",
-    images: ['/vulkan-logo.png'],
+    card: "summary_large_image",
+    title: "Páginas web en Colima y Villa de Álvarez | Vulkanbyte",
+    description:
+      "Diseño sitios web para negocios de Colima. Desde $7,500, entrega en 10 días. Textos y fotos incluidos.",
   },
   robots: {
     index: true,
@@ -69,20 +57,47 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   icons: {
     icon: "/vulkan-icon.ico",
     shortcut: "/vulkan-icon.ico",
-    apple: "/vulkan-icon.ico",
-  },
-  verification: {
-    google: "google-site-verification-code", // Agregar cuando configures Google Search Console
   },
 }
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: SITE.nombre,
+    url: SITE.url,
+    email: SITE.email,
+    telephone: "+523123108241",
+    areaServed: ["Colima", "Villa de Álvarez"],
+    priceRange: "$$",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Colima",
+      addressRegion: "Colima",
+      addressCountry: "MX",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQ.map((item) => ({
+      "@type": "Question",
+      name: item.pregunta,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.respuesta,
+      },
+    })),
+  },
+]
 
 export default function RootLayout({
   children,
@@ -90,12 +105,17 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" className={`${inter.variable} ${openSans.variable} antialiased`}>
+    <html
+      lang="es-MX"
+      className={`${bricolage.variable} ${publicSans.variable} ${jetbrainsMono.variable} antialiased`}
+    >
       <head>
-        <link rel="icon" href="/vulkan-icon.ico?v=1" sizes="32x32" />
-        <link rel="shortcut icon" href="/vulkan-icon.ico?v=1" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
-      <body className="font-sans">{children}</body>
+      <body>{children}</body>
     </html>
   )
 }
