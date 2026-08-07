@@ -46,11 +46,16 @@ export default function PaquetesSection() {
                   }
                 >
                   <CardHeader>
-                    {destacado && (
-                      <span className="inline-block w-fit text-mono uppercase text-magma bg-white/10 px-2 py-1 rounded mb-2">
-                        Recomendado
-                      </span>
-                    )}
+                    <span
+                      aria-hidden={!destacado}
+                      className={
+                        destacado
+                          ? "inline-block w-fit text-mono uppercase text-magma bg-white/10 px-2 py-1 rounded mb-2"
+                          : "invisible inline-block w-fit text-mono uppercase px-2 py-1 rounded mb-2"
+                      }
+                    >
+                      Recomendado
+                    </span>
                     <CardTitle className="text-h3">{p.nombre}</CardTitle>
                     <p className={destacado ? "text-small text-white/70" : "text-small text-muted-foreground"}>
                       {p.paraQuien}

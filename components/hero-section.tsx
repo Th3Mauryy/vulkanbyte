@@ -11,7 +11,7 @@ export default function HeroSection() {
             Páginas web para negocios de {SITE.zona.split(",")[0]}
           </h1>
           <p className="text-body text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Tu página lista en 10 días. Te contesto en menos de 24 horas. Precios visibles, sin cotizar a ciegas.
+            Tu página lista desde 10 días. Te contesto en menos de 24 horas. Precios visibles, sin cotizar a ciegas.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
             <Button asChild size="lg" className="text-base px-8">

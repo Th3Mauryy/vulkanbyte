@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | Vulkanbyte",
   },
   description:
-    "Diseño sitios web para negocios de Colima. Desde $7,500, entrega en 10 días. Textos y fotos incluidos.",
+    "Diseño sitios web para negocios de Colima. Desde $7,500, entrega desde 10 días. Textos y fotos incluidos.",
   authors: [{ name: "Vulkanbyte", url: SITE.url }],
   creator: "Vulkanbyte",
   publisher: "Vulkanbyte",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Páginas web en Colima y Villa de Álvarez | Vulkanbyte",
     description:
-      "Diseño sitios web para negocios de Colima. Desde $7,500, entrega en 10 días. Textos y fotos incluidos.",
+      "Diseño sitios web para negocios de Colima. Desde $7,500, entrega desde 10 días. Textos y fotos incluidos.",
     url: "/",
     siteName: "Vulkanbyte",
     type: "website",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Páginas web en Colima y Villa de Álvarez | Vulkanbyte",
     description:
-      "Diseño sitios web para negocios de Colima. Desde $7,500, entrega en 10 días. Textos y fotos incluidos.",
+      "Diseño sitios web para negocios de Colima. Desde $7,500, entrega desde 10 días. Textos y fotos incluidos.",
   },
   robots: {
     index: true,
