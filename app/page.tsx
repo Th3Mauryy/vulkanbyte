@@ -1,9 +1,9 @@
 import Navbar from "@/components/navbar"
 import HeroSection from "@/components/hero-section"
-import AboutSection from "@/components/about-section"
-import ServicesSection from "@/components/services-section"
-import ValuesSection from "@/components/values-section"
-import PortfolioSection from "@/components/portfolio-section"
+import PaquetesSection from "@/components/paquetes-section"
+import PasosSection from "@/components/pasos-section"
+import TrabajosSection from "@/components/trabajos-section"
+import FaqSection from "@/components/faq-section"
 import ContactSection from "@/components/contact-section"
 import Footer from "@/components/footer"
 
@@ -12,10 +12,10 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <ValuesSection />
-      <PortfolioSection />
+      <PaquetesSection />
+      <PasosSection />
+      <TrabajosSection />
+      <FaqSection />
       <ContactSection />
       <Footer />
     </main>
