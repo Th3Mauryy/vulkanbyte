@@ -21,7 +21,13 @@ export default function TrabajosSection() {
               <Card className="h-full flex flex-col group">
                 <CardHeader>
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-mono uppercase text-agave bg-agave/10 px-2 py-1 rounded">
+                    <span
+                      className={
+                        item.demo
+                          ? "text-mono uppercase text-muted-foreground border border-dashed border-humo px-2 py-1 rounded"
+                          : "text-mono uppercase text-agave bg-agave/10 px-2 py-1 rounded"
+                      }
+                    >
                       {item.category}
                     </span>
                     <Globe className="h-5 w-5 text-humo" strokeWidth={1.5} />

@@ -37,6 +37,8 @@ export type Proyecto = {
   technologies: string[]
   link: string
   category: string
+  /** Demo propia, no un cliente real — la tarjeta lo marca distinto. */
+  demo?: boolean
 }
 
 export type PreguntaFrecuente = {
@@ -153,12 +155,13 @@ export const PASOS: Paso[] = [
 
 export const PROYECTOS: Proyecto[] = [
   {
-    title: "Safesocks",
+    title: "Clínica Dental Almendro",
     description:
-      "Marca de calcetines antiderrapantes con una tinta especial (Antislip Ink) que le da el agarre. Les hice su tienda en línea completa.",
-    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-    link: "https://www.safesocks.mx",
-    category: "E-commerce",
+      "Sitio de demostración para un consultorio dental. Cinco páginas con precios de tratamientos visibles, la primera cita explicada paso a paso y formulario de contacto. El consultorio es ficticio.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    link: "https://clinica-dental-almendro.vercel.app",
+    category: "Demostración",
+    demo: true,
   },
   {
     title: "Dolce&Paca",
